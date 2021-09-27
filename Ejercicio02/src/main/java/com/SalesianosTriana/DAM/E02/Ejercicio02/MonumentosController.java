@@ -29,7 +29,7 @@ public class MonumentosController {
     public ResponseEntity<Monumentos> create (@RequestBody Monumentos task) {
         // return repository.save(task);
         return ResponseEntity
-                .status(HttpStatus.CREATED)
+                .status(HttpStatus.CREATED) // TAMBIEN SE PUEDE PONER EN NÚMEROS .status(201)
                 .body(repository.save(task));
     }
 

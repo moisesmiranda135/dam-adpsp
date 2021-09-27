@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
@@ -26,6 +27,7 @@ public class Monumentos {
 
     private String nomMonumento;
 
+    // @Lob PARA CONVERTIR EL STRING EN EL ALMACENAMIENTO MAS GRANDE QUE SE PUEDA (GUARDAR MÁS INFORMACIÓ)
     private String descripcion;
 
     private String url;
