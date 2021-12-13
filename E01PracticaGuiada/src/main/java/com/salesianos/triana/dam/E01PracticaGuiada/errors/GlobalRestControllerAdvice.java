@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.E01PracticaGuiada.errors;
 
+import com.salesianos.triana.dam.E01PracticaGuiada.errors.exceptions.EntityNotFoundException;
 import com.salesianos.triana.dam.E01PracticaGuiada.errors.exceptions.SingleEntityNotFoundException;
 import com.salesianos.triana.dam.E01PracticaGuiada.errors.models.ApiError;
 import com.salesianos.triana.dam.E01PracticaGuiada.errors.models.ApiSubError;
@@ -15,7 +16,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 
-import javax.persistence.EntityNotFoundException;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,7 +53,7 @@ public class GlobalRestControllerAdvice extends ResponseEntityExceptionHandler {
     private ResponseEntity<Object> buildApiError(Exception ex, WebRequest request) {
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
-                .body(new ApiError(HttpStatus.NOT_FOUND, ex.getMessage(), ((ServletWebRequest) request).getRequest().getRequestURI()));
+                .body(new ApiError(HttpStatus.NOT_FOUND,  ex.getMessage(), ((ServletWebRequest) request).getRequest().getRequestURI()));
 
     }
 
@@ -62,12 +63,5 @@ public class GlobalRestControllerAdvice extends ResponseEntityExceptionHandler {
                 .body(new ApiError(HttpStatus.NOT_FOUND, mensaje, ((ServletWebRequest) request).getRequest().getRequestURI(), subErrores));
 
     }
-
-
-    @ExceptionHandler({SingleEntityNotFoundException.class})
-    public ResponseEntity<?> sinleNotFoundException(EntityNotFoundException ex, WebRequest request) {
-        return buildApiError(ex, request);
-    }
-
 
 }

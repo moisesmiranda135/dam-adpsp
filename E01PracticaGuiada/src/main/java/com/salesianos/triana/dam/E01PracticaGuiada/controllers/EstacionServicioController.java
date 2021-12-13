@@ -29,4 +29,14 @@ public class EstacionServicioController {
     public EstacionServicio crear(@Valid @RequestBody EstacionServicio estacionServicio) {
         return estacionServicioService.save(estacionServicio);
     }
+
+    @DeleteMapping("/{id}")
+    public void borrarEstacion(@PathVariable Long id) {
+        estacionServicioService.deleteById(id);
+    }
+
+    @PutMapping("/{id}")
+    public EstacionServicio editarProducto(@Valid @RequestBody EstacionServicio editar, @PathVariable Long id) {
+        return estacionServicioService.edit(editar,id);
+    }
 }
