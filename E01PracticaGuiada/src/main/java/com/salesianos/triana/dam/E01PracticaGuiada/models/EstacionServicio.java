@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 public class EstacionServicio {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank(message = "{estacionServicio.nombre.blank}")
@@ -38,6 +38,10 @@ public class EstacionServicio {
     @NotNull(message = "estacionServicio.precioGasoilNormal.null")
     @Min(value = 0, message = "estacionServicio.precio.min")
     private double precioGasoilNormal;
+
+    @NotNull(message = "estacionServicio.precioGasolina95Octanos.null")
+    @Min(value = 0, message = "estacionServicio.precio.min")
+    private double precioGasolina95Octanos;
 
     @Min(value = 0, message = "estacionServicio.precio.min")
     private double precioGasoilEspecial;
