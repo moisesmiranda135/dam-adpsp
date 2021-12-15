@@ -1,0 +1,31 @@
+package com.salesianos.triana.dam.E01PracticaGuiada.validation.validations;
+
+import com.salesianos.triana.dam.E01PracticaGuiada.validation.anotations.FetchMatch;
+import org.springframework.beans.PropertyAccessorFactory;
+import org.springframework.util.StringUtils;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+public class FetchMatchValidator implements ConstraintValidator<FetchMatch, Object> {
+
+    private String fetchField;
+    private String verifyfetchField;
+
+
+    @Override
+    public void initialize(FetchMatch constraintAnnotation) {
+        fetchField = constraintAnnotation.fetchField();
+        verifyfetchField = constraintAnnotation.verifyfetchField();
+    }
+
+
+    @Override
+    public boolean isValid(Object value, ConstraintValidatorContext context) {
+        String fetch = (String) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(fetchField);
+        String verifyfetch = (String) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(verifyfetchField);
+
+        return StringUtils.hasText(fetch) && fetch.contentEquals(verifyfetch);
+
+    }
+}

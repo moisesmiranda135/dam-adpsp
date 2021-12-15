@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.E01PracticaGuiada.models;
 
+import com.salesianos.triana.dam.E01PracticaGuiada.validation.anotations.FetchMatch;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -8,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.time.LocalDateTime;
 
 @Entity
@@ -17,6 +19,7 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 @EntityListeners(AuditingEntityListener.class)
+@FetchMatch(fetchField = "fechaApertura", verifyfetchField = "fechaRegistro,", message = "{estacionServicio.fecha.notmatch}")
 public class EstacionServicio {
 
     @Id
@@ -52,6 +55,9 @@ public class EstacionServicio {
     @Lob
     private String servicios;
 
-    @CreatedDate
+    @CreatedDate @Past
     private LocalDateTime fechaApertura;
+
+    @CreatedDate
+    private LocalDateTime fechaRegistro;
 }
