@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "7fa4d0bf-1411-4ee0-a129-ef1a2bd7691b",
+		"name": "Ejercicio03 Práctica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Con error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"moisesmiranda\",\r\n    \"email\": \"moisesmiranda@gmail.com\",\r\n    \"password\": \"As1\",\r\n    \"verifyPassword\": \"As1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/usuario/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"usuario",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sin error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"moisesmiranda\",\r\n    \"email\": \"moisesmiranda@gmail.com\",\r\n    \"password\": \"As1.\",\r\n    \"verifyPassword\": \"As1.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/usuario/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"usuario",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
