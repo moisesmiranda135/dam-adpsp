@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_Primer_AutoRes/01_Primer_AutoRes.iml" filepath="$PROJECT_DIR$/01_Primer_AutoRes/01_Primer_AutoRes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E01PracticaGuiada/E01PracticaGuiada.iml" filepath="$PROJECT_DIR$/E01PracticaGuiada/E01PracticaGuiada.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E02_Ejercicio/E02_Ejercicio.iml" filepath="$PROJECT_DIR$/E02_Ejercicio/E02_Ejercicio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ejercicio02/Ejercicio02.iml" filepath="$PROJECT_DIR$/Ejercicio02/Ejercicio02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ejercicio08/Ejercicio08.iml" filepath="$PROJECT_DIR$/Ejercicio08/Ejercicio08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dam-adpsp.iml" filepath="$PROJECT_DIR$/.idea/dam-adpsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rest-service/rest-service.iml" filepath="$PROJECT_DIR$/rest-service/rest-service.iml" />
+    </modules>
+  </component>
+</project>

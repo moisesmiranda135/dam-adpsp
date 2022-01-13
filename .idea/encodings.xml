@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/01_Primer_AutoRes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/E01PracticaGuiada/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/E02_Ejercicio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Ejercicio02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Ejercicio08/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rest-service/src/main/java" charset="UTF-8" />
+  </component>
+</project>

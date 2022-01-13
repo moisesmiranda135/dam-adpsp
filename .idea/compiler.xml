@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rest-service" />
+        <module name="Ejercicio08" />
+        <module name="E02_Ejercicio" />
+        <module name="01_Primer_AutoRes" />
+        <module name="demo" />
+        <module name="Ejercicio02" />
+        <module name="E01PracticaGuiada" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01_Primer_AutoRes" target="16" />
+      <module name="demo" target="16" />
+      <module name="E01PracticaGuiada" target="16" />
+      <module name="E02_Ejercicio" target="16" />
+      <module name="Ejercicio02" target="16" />
+      <module name="Ejercicio08" target="17" />
+      <module name="rest-service" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01_Primer_AutoRes" options="-parameters" />
+      <module name="E01PracticaGuiada" options="-parameters" />
+      <module name="E02_Ejercicio" options="-parameters" />
+      <module name="Ejercicio02" options="-parameters" />
+      <module name="Ejercicio08" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="rest-service" options="-parameters" />
+    </option>
+  </component>
+</project>
