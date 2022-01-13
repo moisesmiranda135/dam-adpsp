@@ -10,6 +10,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,45 +20,47 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 @EntityListeners(AuditingEntityListener.class)
-@FetchMatch(fetchField = "fechaApertura", verifyfetchField = "fechaRegistro,", message = "{estacionServicio.fecha.notmatch}")
 public class EstacionServicio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "{estacionServicio.nombre.blank}")
-    @NotNull(message = "{estacionServicio.nombre.null}")
     private String nombre;
 
-    @NotBlank(message = "{estacionServicio.marca.blank}")
     private String marca;
 
-    @NotNull(message = "{estacionServicio.ubicacion.null}")
     private String ubicacion;
 
     private boolean tieneAutolavado;
 
-    @NotNull(message = "estacionServicio.precioGasoilNormal.null")
-    @Min(value = 0, message = "estacionServicio.precio.min")
     private double precioGasoilNormal;
 
-    @NotNull(message = "estacionServicio.precioGasolina95Octanos.null")
-    @Min(value = 0, message = "estacionServicio.precio.min")
     private double precioGasolina95Octanos;
 
-    @Min(value = 0, message = "estacionServicio.precio.min")
     private double precioGasoilEspecial;
 
-    @Min(value = 0, message = "estacionServicio.precio.min")
     private double precioGasolina98;
 
     @Lob
     private String servicios;
 
-    @CreatedDate @Past
-    private LocalDateTime fechaApertura;
+
+    private LocalDate fechaApertura;
 
     @CreatedDate
-    private LocalDateTime fechaRegistro;
+    private LocalDate fechaRegistro;
+
+    public EstacionServicio(String nombre, String marca, String ubicacion, boolean tieneAutolavado, double precioGasoilNormal, double precioGasolina95Octanos, double precioGasoilEspecial, double precioGasolina98, String servicios, LocalDate fechaApertura) {
+        this.nombre = nombre;
+        this.marca = marca;
+        this.ubicacion = ubicacion;
+        this.tieneAutolavado = tieneAutolavado;
+        this.precioGasoilNormal = precioGasoilNormal;
+        this.precioGasolina95Octanos = precioGasolina95Octanos;
+        this.precioGasoilEspecial = precioGasoilEspecial;
+        this.precioGasolina98 = precioGasolina98;
+        this.servicios = servicios;
+        this.fechaApertura = fechaApertura;
+    }
 }

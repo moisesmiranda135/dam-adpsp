@@ -5,6 +5,7 @@ import com.salesianos.triana.dam.E01PracticaGuiada.validation.validations.FetchM
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
+import java.time.LocalDate;
 
 @Constraint(validatedBy = FetchMatchValidator.class)
 @Target({ElementType.TYPE})

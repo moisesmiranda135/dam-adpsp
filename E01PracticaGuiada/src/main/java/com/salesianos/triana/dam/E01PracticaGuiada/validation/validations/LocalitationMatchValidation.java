@@ -1,30 +1,25 @@
 package com.salesianos.triana.dam.E01PracticaGuiada.validation.validations;
 
+import com.salesianos.triana.dam.E01PracticaGuiada.repositories.EstacionServicioRepository;
 import com.salesianos.triana.dam.E01PracticaGuiada.validation.anotations.LocalitationMatch;
 import org.springframework.beans.PropertyAccessorFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class LocalitationMatchValidation implements ConstraintValidator<LocalitationMatch, Object> {
+public class LocalitationMatchValidation implements ConstraintValidator<LocalitationMatch, String> {
 
-    private String localitationField;
-    private String verifyLocalitationFiled;
 
-    @Override
-    public void initialize(LocalitationMatch contraintAnnotation){
-        localitationField = contraintAnnotation.localitationField();
-        verifyLocalitationFiled = contraintAnnotation.verifyLocalitationField();
-    }
+    @Autowired
+    private EstacionServicioRepository estacionServicioRepository;
 
     @Override
-    public boolean isValid(Object value, ConstraintValidatorContext context) {
-        String localitation = (String) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(localitationField);
-        String verifyLocalitation = (String) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(verifyLocalitationFiled);
+    public void initialize(LocalitationMatch constraintAnnotation) { }
 
-        return StringUtils.hasText(localitation) && localitation.contentEquals(verifyLocalitation);
-
-
+    @Override
+    public boolean isValid(String nombre, ConstraintValidatorContext context) {
+        return StringUtils.hasText(nombre) && !estacionServicioRepository.existsByUbicacion(nombre);
     }
 }

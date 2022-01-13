@@ -6,6 +6,7 @@ import org.springframework.util.StringUtils;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.time.LocalDate;
 
 public class FetchMatchValidator implements ConstraintValidator<FetchMatch, Object> {
 
@@ -22,10 +23,9 @@ public class FetchMatchValidator implements ConstraintValidator<FetchMatch, Obje
 
     @Override
     public boolean isValid(Object value, ConstraintValidatorContext context) {
-        String fetch = (String) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(fetchField);
-        String verifyfetch = (String) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(verifyfetchField);
+        LocalDate fetch = (LocalDate) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(fetchField);
+        LocalDate verifyfetch = (LocalDate) PropertyAccessorFactory.forBeanPropertyAccess(value).getPropertyValue(verifyfetchField);
 
-        return StringUtils.hasText(fetch) && fetch.contentEquals(verifyfetch);
-
+        return fetch.isBefore(verifyfetch) || fetch.equals(verifyfetch);
     }
 }

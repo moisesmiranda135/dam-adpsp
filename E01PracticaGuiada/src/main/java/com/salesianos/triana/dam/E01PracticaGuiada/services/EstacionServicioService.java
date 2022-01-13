@@ -1,5 +1,7 @@
 package com.salesianos.triana.dam.E01PracticaGuiada.services;
 
+import com.salesianos.triana.dam.E01PracticaGuiada.dto.CreateEstacionServicioDTO;
+import com.salesianos.triana.dam.E01PracticaGuiada.dto.EstacionServicioConverter;
 import com.salesianos.triana.dam.E01PracticaGuiada.errors.exceptions.ListEntityNotFoundException;
 import com.salesianos.triana.dam.E01PracticaGuiada.errors.exceptions.SingleEntityNotFoundException;
 import com.salesianos.triana.dam.E01PracticaGuiada.models.EstacionServicio;
@@ -8,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +20,7 @@ import java.util.Optional;
 public class EstacionServicioService {
 
     private final EstacionServicioRepository estacionServicioRepository;
+    private final EstacionServicioConverter estacionServicioConverter;
 
     public List<EstacionServicio> findAll() {
         List<EstacionServicio> result = estacionServicioRepository.findAll();
@@ -34,11 +39,15 @@ public class EstacionServicioService {
     }
 
 
-    public EstacionServicio save(EstacionServicio estacionServicio) {
-        return estacionServicioRepository.save(estacionServicio);
+    public EstacionServicio save(CreateEstacionServicioDTO dto) {
+        EstacionServicio estacion = estacionServicioConverter.creted(dto);
+
+        this.estacionServicioRepository.save(estacion);
+
+        return estacion;
     }
 
-    public EstacionServicio edit(EstacionServicio editar,Long id) {
+    public EstacionServicio edit(CreateEstacionServicioDTO editar,Long id) {
 
         return estacionServicioRepository.findById(id).map(e -> {
 

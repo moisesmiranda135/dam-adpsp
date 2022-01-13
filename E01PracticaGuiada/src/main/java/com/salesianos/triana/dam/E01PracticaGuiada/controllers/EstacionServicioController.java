@@ -1,8 +1,11 @@
 package com.salesianos.triana.dam.E01PracticaGuiada.controllers;
 
+import com.salesianos.triana.dam.E01PracticaGuiada.dto.CreateEstacionServicioDTO;
 import com.salesianos.triana.dam.E01PracticaGuiada.models.EstacionServicio;
 import com.salesianos.triana.dam.E01PracticaGuiada.services.EstacionServicioService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -26,17 +29,18 @@ public class EstacionServicioController {
     }
 
     @PostMapping("/")
-    public EstacionServicio crear(@Valid @RequestBody EstacionServicio estacionServicio) {
-        return estacionServicioService.save(estacionServicio);
+    public ResponseEntity<EstacionServicio> crear(@Valid @RequestBody CreateEstacionServicioDTO dto) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(estacionServicioService.save(dto));
     }
 
     @DeleteMapping("/{id}")
-    public void borrarEstacion(@PathVariable Long id) {
+    public ResponseEntity<?> borrarEstacion(@PathVariable Long id) {
         estacionServicioService.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
-    public EstacionServicio editarProducto(@Valid @RequestBody EstacionServicio editar, @PathVariable Long id) {
+    public EstacionServicio editarProducto(@Valid @RequestBody CreateEstacionServicioDTO editar, @PathVariable Long id) {
         return estacionServicioService.edit(editar,id);
     }
 }
