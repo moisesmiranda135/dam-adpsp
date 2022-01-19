@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d95b650-cf44-4f9f-8020-aabf924bcc9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="6d95b650-cf44-4f9f-8020-aabf924bcc9e" name="Changes" comment="Se intenta el ejercicio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/AllSuiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/ventaServicio/NuevaVenta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/salesianostriana/dam/ejerciciotesting/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/salesianostriana/dam/ejerciciotesting/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
       <recent name="C:\Users\miranda.comoi20\Documents\ADPSP\dam-adpsp\Testing\EjercicioMockito\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="JUnit.AppTest.whenAddProductoToVenta_thenReturnVenta">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.salesianostriana.dam.ejerciciotesting.App" />
       <module name="EjercicioMockito" />
@@ -71,6 +69,22 @@
       <option name="PACKAGE_NAME" value="com.salesianostriana.dam.ejerciciotesting" />
       <option name="MAIN_CLASS_NAME" value="com.salesianostriana.dam.ejerciciotesting.AppTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.whenAddProductoToVenta_thenReturnVenta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EjercicioMockito" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.salesianostriana.dam.ejerciciotesting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.salesianostriana.dam.ejerciciotesting" />
+      <option name="MAIN_CLASS_NAME" value="com.salesianostriana.dam.ejerciciotesting.AppTest" />
+      <option name="METHOD_NAME" value="whenAddProductoToVenta_thenReturnVenta" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,8 +123,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.whenAddProductoToVenta_thenReturnVenta" />
         <item itemvalue="JUnit.AppTest.whenNewSale_thenReturnSale" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.whenNuevaVenta_thenReturnVenta" />
         <item itemvalue="Application.App" />
       </list>
@@ -125,6 +140,14 @@
       <option name="presentableId" value="Default" />
       <updated>1642510492714</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se intenta el ejercicio">
+      <created>1642535101363</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642535101363</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,5 +160,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se intenta el ejercicio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se intenta el ejercicio" />
   </component>
 </project>
