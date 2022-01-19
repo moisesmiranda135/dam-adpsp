@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d95b650-cf44-4f9f-8020-aabf924bcc9e" name="Changes" comment="Se intenta el ejercicio">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/salesianostriana/dam/ejerciciotesting/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/salesianostriana/dam/ejerciciotesting/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/salesianostriana/dam/ejerciciotesting/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
